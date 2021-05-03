@@ -1,3 +1,22 @@
 
 # crear start app
  crea una carpeta models, test, views, 
+
+
+ #ORM
+
+
+ py manage.py migrate
+
+ 1. py manage.py makemigrations nombre_modulo
+
+ 2. py manage.py sqlmigrate polls 0001
+
+ 3. py manage.py migrate
+
+ # SHELL
+ import apps.dashboard.model import Menu
+ q = Menu(icon='home', rutaName='/home',nombre='Home')
+ q.save()
+
+ 
