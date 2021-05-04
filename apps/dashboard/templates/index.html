@@ -1,14 +1,14 @@
 
 {% extends 'main/base_layout.html' %}
 
+
 {% block content %}
     {% if menu %}
+
         <ul>
         {% for item in menu %}
             <p>{{ item.id }} {{ item.nombre }}</p> 
-            <span class="material-icons">
-            map
-            </span>
+            <span class="material-icons">map</span>
             <li><a href="/polls/{{ item.id }}/">{{ item.nombre }}</a></li>
         {% endfor %}
         </ul>

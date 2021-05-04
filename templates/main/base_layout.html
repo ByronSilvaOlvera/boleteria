@@ -5,10 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet">
+    <style>
+        *{
+            margin: 0; padding: 0;
+        }
+        .icons-by{
+            font-size: 3.0rem;
+            margin: auto;
+            align-items: center;
+            color: rgb(121, 196, 10);
+
+            display: flex;
+        }
+        .cont-icons{
+            padding-inline: 23px;
+            margin: 0.2rem;
+            background-color: rgb(226, 250, 243);
+            width: auto;
+            height: 105px;
+            border-radius: 20px;
+            
+            display: flex;
+            flex-direction: column;
+        }
+        .name{
+            text-align: center;
+            font-size: 1.2rem;  
+            color: rgb(56, 201, 152);  
+            margin-bottom: 6px;
+        }
+        .body-boleteria{
+            margin: 0.8rem;
+            padding: 3rem;
+            background-color: rgb(247, 250, 234);
+            border-radius: 30px;
+            height: 550px;
+        }
+        .nav-left{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+
 </head>
 <body>
-    <p>Header</p>
-    {% block content %}
-    {% endblock %}
+
+    <div style="display: flex;">
+        <div  style="width: 10%; height: 650px; margin-left: 3px; margin-top: 4px;" >    
+            <!-- <div  class="cont-icons">
+                <span class="material-icons icons-by">assignment_ind</span>
+                <p class="name">Cliente</p>
+              </div> -->
+
+              {% include 'main/menu.html' %}    
+        </div>
+        <div style="width: 80%;">
+            <div>
+
+            </div>
+            <div class="body-boleteria" >
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
