@@ -12,3 +12,4 @@ class Menu(models.Model):
 
     def icon_get(self):
         return self.icon
+

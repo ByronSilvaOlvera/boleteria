@@ -1,7 +1,12 @@
 
 # crear start app
+py manage.py startapp nombreModulo
  crea una carpeta models, test, views, 
 
+#nota
+agregar el modulo en el archivo settings.py array NSTALLED_APPS[ ... ]
+esto se ace para seguir el siguete paso que es ORM
+se debe cambiar la ruta de modulo apps.py
 
  #ORM
 
@@ -25,6 +30,7 @@
 py manage.py createsuperuser
 nombre de usuario: admin
 pass by123456
+1. cajero01 => by123456 Jose Rivera jose@gmail.com
 
 # agregar model al admin del Django 
 
@@ -37,6 +43,14 @@ admin.site.register(Menu)
 # se puede agregar datos de un manera rapida
 
 
-
+#Templates global
+la linea de abajo debe estar en opcion arreglo TEMPLATES
+opcion 'DIR :[]' dentro de ese arreglo para poder extender 
+la plantilla de base en otra plantillas
+os.path.join(BASE_DIR, 'templates'),
+eJ.
+DIR: [
+    os.path.join(BASE_DIR, 'templates'),
+]
 
 
