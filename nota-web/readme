@@ -53,4 +53,6 @@ DIR: [
     os.path.join(BASE_DIR, 'templates'),
 ]
 
+#formulario View
+para poder verlo html agregar la palabra {{ form }}
 

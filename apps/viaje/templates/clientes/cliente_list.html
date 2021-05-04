@@ -1,0 +1,16 @@
+
+
+{% extends "main/base_layout.html" %}
+
+{% block content %}
+    <h2>Lista de clientes</h2>
+    {% if cliente_list %}
+    <ul>
+        {% for cliente in cliente_list %}
+            <li>{{ cliente.nombre }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+     <p>No existe clientes</p>
+    {% endif %}
+{% endblock %}

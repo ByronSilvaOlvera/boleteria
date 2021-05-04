@@ -1,0 +1,17 @@
+
+{% extends "main/base_layout.html" %}
+
+{% block content %}
+    <h2>Lista de Transporte</h2>
+    {% if transporte_list %}
+    <ul>
+        {% for bus in transporte_list %}
+            <li>Disco {{ bus.disco }}, Placa {{ bus.placa }}, 
+                Marca/Modelo {{ bus.marca  }} {{ bus.modelo }}
+                Anio {{ bus.anio }} </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+     <p>No existe Transportes</p>
+    {% endif %}
+{% endblock %}

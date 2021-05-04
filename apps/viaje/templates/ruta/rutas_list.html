@@ -1,0 +1,19 @@
+
+
+{% extends "main/base_layout.html" %}
+
+{% block content %}
+    <div>
+        <h2>Lista de Rutas</h2>
+        <button class="btn btn-outline-primary my-3" > Nueva Ruta  </button> 
+    </div>
+    {% if ruta_list %}
+    <ul>
+        {% for ruta in ruta_list %}
+            <li> {{ ruta.nombre }} Tiempo: {{ ruta.horas }} </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+     <p>No existe Rutas</p>
+    {% endif %}
+{% endblock %}
