@@ -1,6 +1,6 @@
 
 # crear start app
-py manage.py startapp nombreModulo
+py manage.py startapp nombreModulo<br>
  crea una carpeta models, test, views, 
 
 #nota
