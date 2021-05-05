@@ -1,0 +1,12 @@
+{% extends "main/base_layout.html" %}
+
+{% block content %}
+    <h2>Cliente Listado</h2>
+    <ul>
+        {% for cli in object_list %}
+            <li>{{ cli.nombres }}</li>
+            <button class="btn btn-success"> Editar </button>
+            <button class="btn btn-success"> detalle </button>
+        {% endfor %}
+    </ul>
+{% endblock %}

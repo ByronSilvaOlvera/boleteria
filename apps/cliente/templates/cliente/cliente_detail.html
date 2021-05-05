@@ -1,0 +1,13 @@
+
+{% extends "main/base_layout.html" %}
+
+{% block content %}
+<h2>Cliente detalle</h2>
+
+Registro: {{ object.id  }} <br>
+Nombres: {{ object.nombres  }} <br>
+Apellidos: {{ object.apellidos  }} <br>
+Email: {{ object.correo  }} <br>
+Identificacion: {{ object.identificacion  }} <br>
+Fecha Nacimiento: {{ object.fechaNacimiento  }}
+{% endblock %}

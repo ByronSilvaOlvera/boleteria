@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.dashboard.apps.DashboardConfig', #
     'apps.viaje.apps.ViajeConfig',
-    
+    'apps.cliente.apps.ClienteConfig',
+
     
 ]
 

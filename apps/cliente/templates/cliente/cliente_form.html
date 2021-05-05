@@ -1,0 +1,15 @@
+{% extends "main/base_layout.html" %}
+
+<div class="cont-form-create"  > 
+
+    {% block content %}
+
+    <h2>Cliente nuevo</h2>
+        <form method="POST" style="width: 17%;" class="form-create" >
+            {% csrf_token %}
+            {{ form.as_p }}    
+   
+            <button type="submit">SUBMIT</button>
+        </form>
+    {% endblock %}
+</div>
