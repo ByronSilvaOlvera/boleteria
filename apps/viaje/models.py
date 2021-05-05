@@ -42,7 +42,7 @@ class Transporte(models.Model):
         return self.disco
 
 class ViajeRuta(models.Model):
-    nombre  = models.CharField(max_length=200)
+    nombre  = models.CharField(max_length=200, null=False )
     inicio  = models.CharField(max_length=200)
     destino = models.CharField(max_length=200)
     horas   = models.CharField(max_length=200)
@@ -51,7 +51,8 @@ class ViajeRuta(models.Model):
         return self.nombre
 
     def get_absolute_url(self):
-        return reverse('ruta-detail', kwargs={'pk' : self.pk } )
+        # envia al template detalle con el id
+        return reverse('ruta-detail', kwargs={'id' : self.id } )
     
     
 

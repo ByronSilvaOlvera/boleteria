@@ -3,7 +3,7 @@ from django.views.generic import ListView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView 
 
 #from boleteria,forms import RutaForm
-
+from .forms import RutaForm
 
 from .models import Cliente, Transporte, ViajeRuta
 # Create your views here.
@@ -24,7 +24,15 @@ class RutaListView(ListView):
     template_name = 'ruta/rutas_list.html'
 
 class RutaCreateView(CreateView):
+    template_name = 'ruta/ruta_form.html'
+    form_class    = RutaForm
+    queryset      = ViajeRuta.objects.all()
+    success_url   = 'ruta/'
+   
+class RutaCreateViews(CreateView):
     model = ViajeRuta
-    fields = ['nombre','inicio','destino','horas']
+    fields = '__all__'
+    #success_url = 'ruta'
+
 
 

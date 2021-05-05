@@ -1,12 +1,13 @@
 
 {% extends "main/base_layout.html" %}
 
-{% block content %}
-   <form action="." method="POST">
-
-        {% csrf_token %}
-        {{ form }}
-        
-        <button type="submit">SUBMIT</button>
-    </form>
-{% endblock %}
+<div class="cont-form-create"  > 
+    {% block content %}
+        <form method="POST" style="width: 17%;" class="form-create" >
+            {% csrf_token %}
+            {{ form.as_p }}    
+   
+            <button type="submit">SUBMIT</button>
+        </form>
+    {% endblock %}
+</div>
