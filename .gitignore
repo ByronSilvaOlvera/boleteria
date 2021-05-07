@@ -1,0 +1,15 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+apps/cliente/migrations/*
+apps/cliente/__pycache__
+
+apps/viaje/migrations/*
+apps/viaje/__pycache__
+
+apps/dashboard/migrations/*
+apps/dashboard/__pycache__
+
+.vscode/
+
+
