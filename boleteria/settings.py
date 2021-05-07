@@ -28,6 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Pagina de inicia 
+LOGIN_REDIRECT_URL = '/dashboard'
 
 # Application definition
 

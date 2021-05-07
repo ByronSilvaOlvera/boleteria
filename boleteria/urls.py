@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# AUTH_VIEW
+from django.contrib.auth import views as auth_views
+
 
 urlpatterns = [
 
@@ -23,4 +26,8 @@ urlpatterns = [
     path('dashboard/', include('apps.dashboard.urls')),
     path('viaje/', include('apps.viaje.urls')),
     path('admin/', admin.site.urls),
+
+    #PERMISSION AUTHENTICATION
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('change-password/', auth_views.PasswordChangeView.as_view()),
 ]
